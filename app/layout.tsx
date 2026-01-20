@@ -5,7 +5,7 @@ import FloatingWA from "../components/FloatingWA";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Ostakarya Jaya",
   description: "Interior Design & Construction Company",
 
@@ -23,10 +23,8 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ostakarya Jaya",
       },
     ],
-    locale: "en_US",
     type: "website",
   },
 };
