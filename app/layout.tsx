@@ -3,11 +3,31 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FloatingWA from "../components/FloatingWA";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Ostakarya Jaya",
   description: "Interior Design & Construction Company",
+
   icons: {
-    icon: "/portfolio/favicon.png", // <--- cukup pakai path string
+    icon: "/favicon.png",
+  },
+
+  openGraph: {
+    title: "Ostakarya Jaya",
+    description: "Interior Design & Construction Company",
+    url: "https://ostakarya-jaya.vercel.app",
+    siteName: "Ostakarya Jaya",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ostakarya Jaya",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
