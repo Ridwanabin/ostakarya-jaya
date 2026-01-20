@@ -1,21 +1,15 @@
 import "./globals.css";
-import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import FloatingWA from "../components/FloatingWA";
 
-export const metadata: Metadata = {
-  title: "Ostakarya Jaya | Interior Design & Construction",
-  description:
-    "Ostakarya Jaya is a trusted interior design and construction company with over 25 years of experience in corporate and commercial projects.",
-  keywords: [
-    "interior design",
-    "contractor",
-    "office interior",
-    "construction company",
-    "Jakarta interior"
-  ],
+export const metadata = {
+  title: "Ostakarya Jaya",
+  description: "Interior Design & Construction Company",
+  icons: {
+    icon: "/portfolio/favicon.png", // <--- cukup pakai path string
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -24,9 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
+      <body className="antialiased">
         <Navbar />
         {children}
+        <FloatingWA />
         <Footer />
       </body>
     </html>

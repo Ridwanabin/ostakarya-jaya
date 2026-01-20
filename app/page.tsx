@@ -1,20 +1,20 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Workflow from "@/components/Workflow";
-import Clients from "@/components/Clients";
-import Contact from "@/components/Contact";
-import Projects from "@/components/Projects";
-
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Services from "../components/Services";
+import Projects from "../components/Projects";
+import Clients from "../components/Clients";
+import Pricing from "../components/Pricing";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <main className="pt-20">
+    <main className="overflow-hidden">
       <Hero />
       <About />
       <Services />
-      <Workflow />
+      <Projects />
       <Clients />
+      <Pricing />
       <Contact />
     </main>
   );
