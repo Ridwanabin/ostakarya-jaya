@@ -1,19 +1,20 @@
 "use client";
 
 export default function FloatingWA() {
-  const phoneNumber = "628123456789"; // GANTI nomor WA kamu
-  const message = encodeURIComponent(
-    "Halo Ostakarya Jaya, saya ingin konsultasi mengenai interior & construction."
-  );
+  // Scroll to #contact
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <a
-      href={`https://wa.me/${phoneNumber}?text=${message}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition"
+    <button
+      onClick={scrollToContact}
+      className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
     >
-      💬 WhatsApp
-    </a>
+      Contact Us
+    </button>
   );
 }
